@@ -13,7 +13,7 @@ struct NickNickApp: App {
         WindowGroup {
             NavigationView {
                 ContentView()
-                //  EContentView()
+                 // EContentView()
             }
         }
     }
