@@ -12,8 +12,12 @@
 
 import SwiftUI
 
-//MARK: 1. Step
-// MODEL
+//MARK: 1. Step - MODEL
+/// This is Person model
+/// The JSON response is an array:
+/// - gender (male/female)
+/// - name
+///
 struct Person: Codable {
     var results: [Result]
     
