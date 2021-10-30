@@ -9,6 +9,6 @@ import Foundation
 
 struct ApiEndPoint {
     var EndPointString: String {
-        return ("https://randomuser.me/api/?nat=us&results=20&inc=gender,name")
+        return ("httkps://randomuser.me/api/?nat=us&results=20&inc=gender,name")
     }
 }

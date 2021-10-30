@@ -13,10 +13,16 @@ struct ContentView: View {
     
     var body: some View {
         NavigationView {
-            List(peopleViewModel.people, id:\.self) { person in
-                Text(person.fullName)
+            switch peopleViewModel.errorMessage {
+            case nil:
+                List(peopleViewModel.people, id:\.self) { person in
+                    Text(person.fullName)
+                }
+                .navigationTitle("People")
+                
+            default:
+                Text("\(peopleViewModel.errorMessage!)")
             }
-            .navigationTitle("People")
         }
         .onAppear {
             peopleViewModel.getPeopleByNetworkService()

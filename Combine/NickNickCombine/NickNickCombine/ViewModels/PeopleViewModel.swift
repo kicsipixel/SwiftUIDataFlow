@@ -13,13 +13,19 @@ final class PeopleViewModel: ObservableObject {
     private let networkService = NetworkSerivce()
     
     @Published var people: [PersonViewModel] = []
+    @Published var errorMessage: String? = nil
     
     var cancaellable: AnyCancellable?
     
     func getPeopleByNetworkService() {
         cancaellable = networkService.fetchPeople().sink(receiveCompletion: { err in
-            print(err)
-            // TODO: Handle error messages here...
+            switch err {
+            case .finished:
+                // Do nothing or just indicate to users that everything done properly
+                print("Done...")
+            case .failure(let err):
+                self.errorMessage = err.localizedDescription
+            }
         }, receiveValue: { result in
             self.people = result.results.map { PersonViewModel(person: $0) }
         })
