@@ -85,6 +85,7 @@ struct ContentView: View {
                     }
                 }
             }
+            .navigationTitle("People")
         }
         .onAppear {
             self.viewModel.fetchDataFromAPI()
