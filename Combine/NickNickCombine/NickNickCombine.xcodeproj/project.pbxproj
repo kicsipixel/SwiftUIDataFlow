@@ -12,6 +12,10 @@
 		574E97AE272D58CF0046CC49 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 574E97AD272D58CF0046CC49 /* Assets.xcassets */; };
 		574E97B1272D58CF0046CC49 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 574E97B0272D58CF0046CC49 /* Preview Assets.xcassets */; };
 		574E97BC272D5AC80046CC49 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574E97BB272D5AC80046CC49 /* Person.swift */; };
+		574E97BE272D5E5E0046CC49 /* PeopleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574E97BD272D5E5E0046CC49 /* PeopleViewModel.swift */; };
+		574E97C0272D5E6C0046CC49 /* PersonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574E97BF272D5E6C0046CC49 /* PersonViewModel.swift */; };
+		574E97C3272D5FE30046CC49 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574E97C2272D5FE30046CC49 /* NetworkService.swift */; };
+		574E97C6272D60D60046CC49 /* ApiEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574E97C5272D60D60046CC49 /* ApiEndpoint.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,10 @@
 		574E97B0272D58CF0046CC49 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		574E97B2272D58CF0046CC49 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		574E97BB272D5AC80046CC49 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		574E97BD272D5E5E0046CC49 /* PeopleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewModel.swift; sourceTree = "<group>"; };
+		574E97BF272D5E6C0046CC49 /* PersonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonViewModel.swift; sourceTree = "<group>"; };
+		574E97C2272D5FE30046CC49 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		574E97C5272D60D60046CC49 /* ApiEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiEndpoint.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,11 +62,12 @@
 		574E97A8272D58CE0046CC49 /* NickNickCombine */ = {
 			isa = PBXGroup;
 			children = (
+				574E97C4272D60C80046CC49 /* Constants */,
+				574E97C1272D5FC40046CC49 /* NetworkService */,
 				574E97BA272D59AE0046CC49 /* Views */,
 				574E97B9272D59A20046CC49 /* ViewModels */,
 				574E97B8272D59990046CC49 /* Model */,
 				574E97A9272D58CE0046CC49 /* NickNickCombineApp.swift */,
-				574E97AB272D58CE0046CC49 /* ContentView.swift */,
 				574E97AD272D58CF0046CC49 /* Assets.xcassets */,
 				574E97B2272D58CF0046CC49 /* Info.plist */,
 				574E97AF272D58CF0046CC49 /* Preview Content */,
@@ -85,6 +94,8 @@
 		574E97B9272D59A20046CC49 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				574E97BD272D5E5E0046CC49 /* PeopleViewModel.swift */,
+				574E97BF272D5E6C0046CC49 /* PersonViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -92,8 +103,25 @@
 		574E97BA272D59AE0046CC49 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				574E97AB272D58CE0046CC49 /* ContentView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		574E97C1272D5FC40046CC49 /* NetworkService */ = {
+			isa = PBXGroup;
+			children = (
+				574E97C2272D5FE30046CC49 /* NetworkService.swift */,
+			);
+			path = NetworkService;
+			sourceTree = "<group>";
+		};
+		574E97C4272D60C80046CC49 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				574E97C5272D60D60046CC49 /* ApiEndpoint.swift */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,7 +194,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				574E97BC272D5AC80046CC49 /* Person.swift in Sources */,
+				574E97C0272D5E6C0046CC49 /* PersonViewModel.swift in Sources */,
+				574E97BE272D5E5E0046CC49 /* PeopleViewModel.swift in Sources */,
+				574E97C6272D60D60046CC49 /* ApiEndpoint.swift in Sources */,
 				574E97AC272D58CE0046CC49 /* ContentView.swift in Sources */,
+				574E97C3272D5FE30046CC49 /* NetworkService.swift in Sources */,
 				574E97AA272D58CE0046CC49 /* NickNickCombineApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -10,12 +10,11 @@ import Foundation
 struct Person: Codable {
     var results: [Result]
     
-    struct Result: Codable,Identifiable  {
-        var id = UUID()
+    struct Result: Codable, Hashable {
         var gender: String
         var name: Name
         
-        struct Name: Codable {
+        struct Name: Codable, Hashable {
             var title: String
             var firstName: String
             var lastName: String
