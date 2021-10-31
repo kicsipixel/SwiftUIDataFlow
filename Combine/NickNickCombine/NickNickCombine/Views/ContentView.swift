@@ -15,8 +15,11 @@ struct ContentView: View {
         NavigationView {
             switch peopleViewModel.errorMessage {
             case nil:
-                List(peopleViewModel.people, id:\.self) { person in
-                    Text(person.fullName)
+                List(peopleViewModel.people, id:\.id) { person in
+                    HStack {
+                        person.genderImage
+                        Text(person.fullName)
+                    }
                 }
                 .navigationTitle("People")
                 

@@ -10,11 +10,22 @@ import Foundation
 struct Person: Codable {
     var results: [Result]
     
-    struct Result: Codable, Hashable {
-        var gender: String
+    struct Result: Codable, Identifiable {
+        var id = UUID()
+        var gender: Gender
         var name: Name
         
-        struct Name: Codable, Hashable {
+        enum Gender: String, Codable {
+            case female
+            case male
+        }
+        
+        enum CodingKeys: String, CodingKey {
+            case gender
+            case name
+        }
+        
+        struct Name: Codable {
             var title: String
             var firstName: String
             var lastName: String
