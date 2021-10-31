@@ -18,7 +18,7 @@ final class PeopleViewModel: ObservableObject {
     var cancaellable: AnyCancellable?
     
     func getPeopleByNetworkService() {
-        cancaellable = networkService.fetchPeople().sink(receiveCompletion: { err in
+        cancaellable = networkService.fetchPeople().sink(receiveCompletion: { [unowned self] err in
             switch err {
             case .finished:
                 // Do nothing or just indicate to users that everything done properly
