@@ -1,13 +1,14 @@
-## Simple example about @ObservableObject, @StateObject/@ObservedObject
+# SwiftUI Data flow simple example
 
-### With Combine and without
+## @ObservableObject, @StateObject/@ObservedObject
+
+### MVVM (using closure with @escaping)
 
 Comments and some explanations
 in the code.
 
 There are two ContentView:
 
-- simple `ContentView`
 - `EContentView` using better MVVM approach
 
 Separated the two solutions.
@@ -16,3 +17,7 @@ Separated the two solutions.
 - a better approach showing the folder structure
 
 ![](README.jpg)
+
+### Combine
+
+Everything is the same but instead of closures, we use Combine framework.
